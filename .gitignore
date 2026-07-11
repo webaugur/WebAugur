@@ -1,2 +1,5 @@
-.pio
-.vscode
+# Local reverse-engineering secrets
+DataSheet/private/rom/
+DataSheet/private/captures/
+DataSheet/private/photos/
+DataSheet/private/cpu-board/
