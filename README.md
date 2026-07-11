@@ -1,18 +1,24 @@
-# ESP32 Bit Pirate
+# WebAugur
 
-[![Logo banner of the ESP32 Bit Pirate firmware](images/logo_protocols_banner_small.png)](https://geo-tp.github.io/ESP32-Bit-Pirate/)
+**WebAugur** is a fork of [ESP32 Bit Pirate](https://github.com/geo-tp/ESP32-Bit-Pirate) — open-source firmware that turns an ESP32 into a multi-protocol development and analysis tool, inspired by the legendary Bus Pirate.
 
+This fork lives under [webaugur/WebAugur](https://github.com/webaugur/WebAugur). Upstream remains the source of truth for many docs and tools until WebAugur-specific infrastructure catches up.
 
-**ESP32 Bit Pirate** is open-source firmware that turns your device into a multi-protocol development and analysis tool, inspired by the legendary Bus Pirate.
+It supports sniffing, sending, scripting, and interacting with digital protocols (I2C, UART, 1-Wire, SPI, and more) via a serial terminal or web-based CLI, plus radio protocols such as Bluetooth, Wi-Fi, Sub-GHz, and RFID.
 
-It supports sniffing, sending, scripting, and interacting with various digital protocols (I2C, UART, 1-Wire, SPI, etc.) via a serial terminal or web-based CLI. It also communicates with radio protocols like Bluetooth, Wi-Fi, Sub-GHz and RFID.
+![Demo showing the different modes of the firmware](images/bit_pirate_uart.gif)
+![Demo showing the LittleFS file system](images/pirate_assistant.gif)
 
-The official project website centralizes everything: [ESP32 Bit Pirate Website](https://geo-tp.github.io/ESP32-Bit-Pirate/).
+## Fork relationship
 
-From there you can [install the firmware](https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/), open the [web tools](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/), follow [hardware guides](https://geo-tp.github.io/ESP32-Bit-Pirate/hardware/), explore [recipes](https://geo-tp.github.io/ESP32-Bit-Pirate/recipes/), and access the [documentation](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki).
+| | URL |
+|---|---|
+| **This fork** | https://github.com/webaugur/WebAugur |
+| **Upstream** | https://github.com/geo-tp/ESP32-Bit-Pirate |
+| **Upstream website** | https://geo-tp.github.io/ESP32-Bit-Pirate/ |
+| **Upstream wiki** | https://github.com/geo-tp/ESP32-Bit-Pirate/wiki |
 
-![Demo showing the different mode of the ESP32 Bit Pirate firmware](images/bit_pirate_uart.gif)
-![Demo showing the LittleFS file system of the ESP32 Bit Pirate firmware](images/pirate_assistant.gif)
+Upstream website, web flasher, web tools, and wiki still apply and are linked below. WebAugur branding is applied in the firmware UI, web terminal title, and this repository.
 
 ## Features
 
@@ -39,7 +45,6 @@ From there you can [install the firmware](https://geo-tp.github.io/ESP32-Bit-Pir
    - [FM](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/22-FM) (analyze, broadcast)
    - [CELL](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/23-CELL) (dump sim card, sms, call)
 
-
 - **Protocol sniffers** I2C, UART, SPI, 1Wire, 2wire, CAN, Wi-Fi, Bluetooth, SubGhz.
 - Baudrate **auto-detection**, AT commands and various tools for UART.
 - Registers manipulation, **EEPROM dump tools**, identify devices for I2C.
@@ -51,7 +56,7 @@ From there you can [install the firmware](https://geo-tp.github.io/ESP32-Bit-Pir
 - Near than **50 addressable LEDs protocols** supported.
 - **Ethernet and WiFi** are supported to access networks.
 - Import and export data with the **LittleFS over HTTP.**
-- **Pirate assistant** to help you with the firmware.
+- **WebAugur Assistant** (web UI AI helper) to help you with the firmware.
 - **USB-Uart dongle, SPI programmer, logic analyzer** and more.
 - [**Web Serial tools**](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/) to use USB Serial over a web browser.
 
@@ -82,11 +87,11 @@ From there you can [install the firmware](https://geo-tp.github.io/ESP32-Bit-Pir
 
 ## Getting Started
 
-[![Banner of the ESP32 Bit Pirate web flasher](images/flasher.jpg)](https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/)
+[![Banner of the web flasher](images/flasher.jpg)](https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/)
 
 1. 🔧 Flash the firmware
-   - Use the [ESP32 Bit Pirate Web Flasher](https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/) to burn the firmware directly from a web browser.
-   - You can also burn it on [M5Burner](https://docs.m5stack.com/en/download), in the StickS3, AtomS3, M5StampS3 or Cardputer category.
+   - Build and upload this fork with PlatformIO (see [Build](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Build)), or use the [upstream Web Flasher](https://geo-tp.github.io/ESP32-Bit-Pirate/webflasher/) for stock Bit Pirate builds.
+   - You can also burn stock builds on [M5Burner](https://docs.m5stack.com/en/download), in the StickS3, AtomS3, M5StampS3 or Cardputer category.
 
 2. 🔌 Connect via Serial or Web
    - Serial: any terminal app, or the [free browser-based Web Serial terminal](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/web-serial-terminal/) (see [Connect via Serial](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Serial))
@@ -98,59 +103,44 @@ From there you can [install the firmware](https://geo-tp.github.io/ESP32-Bit-Pir
    help
    scan
    sniff
-   ...
-    ```
+   ```
 
-## Wiki
+## Documentation
 
-[![Banner of the ESP32 Bit Pirate Wiki page](images/bus_pirate_wiki.png)](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/)
+[![Banner of the wiki page](images/bus_pirate_wiki.png)](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/)
 
-📚 **[Visit the Wiki](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki)** for detailed documentation on every mode and command.
+📚 **[Visit the upstream Wiki](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki)** for detailed documentation on every mode and command.
 
-Includes:
 - [Terminal mode](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/00-Terminal) - About serial and web terminal.
 - [Mode overviews](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki) - Browse supported modes.
 - [Serial setup](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Serial) - Serial access via USB.
 
-The wiki is the best place to learn how everything works.
+## Python Scripts
 
-## Scripting
+[![Banner of the Scripts page](images/bus_pirate_scripts.png)](https://github.com/geo-tp/ESP32-Bit-Pirate-Scripts/)
 
-[![Banner of the ESP32 Bit Pirate Scripts page](images/bus_pirate_scripts.png)](https://github.com/geo-tp/ESP32-Bit-Pirate-Scripts/)
+🛠️ [**Automate interactions over serial**](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Python) using **Python scripts.**
 
-🛠️ [**Automate interactions with the ESP32 Bit Pirate**](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Python) using **Python scripts over serial.**
-
-You can write and test scripts directly in the browser with the [ESP32 Bit Pirate Python Lab](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/python-lab/).
-
-**Including:** Logging data in a file, eeprom and flash dump, interracting with GPIOs, LED animation...
+You can write and test scripts directly in the browser with the [Python Lab](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/python-lab/).
 
 ## Expander
-[![Banner of the ESP32 Bit Pirate Expander page](images/bus_pirate_exp.png)](https://github.com/geo-tp/ESP32-Bus-Expander)
 
+[![Banner of the Expander page](images/bus_pirate_exp.png)](https://github.com/geo-tp/ESP32-Bus-Expander)
 
-🔌 **[Expand the capabilities of the ESP32 Bit Pirate](https://github.com/geo-tp/ESP32-Bus-Expander)** with additional hardware modules.
-The Expander adds support for the **WiFi 5 GhZ** or other radio protocols.
-
-![A Cardputer connected to an expander C5](images/cardputer_with_c5.jpg)
-
+🔌 **[Expand capabilities](https://github.com/geo-tp/ESP32-Bus-Expander)** with additional hardware modules.
 
 ## Dock
-[![Banner of the ESP32 Bit Pirate Dock page](images/bus_pirate_dock.png)](https://github.com/AndreiVladescu/ESP32-Bit-Pirate-Dock)
+
+[![Banner of the Dock page](images/bus_pirate_dock.png)](https://github.com/AndreiVladescu/ESP32-Bit-Pirate-Dock)
 
 🔧 **[A docking station for the ESP32 S3 DevKit](https://github.com/AndreiVladescu/ESP32-Bit-Pirate-Dock) designed to work with original Bus Pirate adapters.**
 It allows you to plug and use the original [Bus Pirate](https://buspirate.com/) ecosystem of adapters and accessories.
 
-![The ESP32 Bit Pirate dock board](images/bus_pirate_dock_board.png)
+![The dock board](images/bus_pirate_dock_board.png)
 
-(Coming soon)
+## CLI Interfaces
 
-[![PCBWay Logo](images/pcbway_logo.png)](https://www.pcbway.com)
-
-
-
-## Command-Line Interfaces
-
-The ESP32 Bit Pirate firmware provides three command-line interface (CLI) modes:
+The firmware provides three command-line interface (CLI) modes:
 
 | Interface         | Advantages                                                                 | Ideal for...                          |
 |------------------|-----------------------------------------------------------------------------|----------------------------------------|
@@ -162,26 +152,41 @@ The ESP32 Bit Pirate firmware provides three command-line interface (CLI) modes:
 All interfaces share the same command structure and can be used interchangeably ([more details](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/00-Terminal)).
 
 ## Mobile Web Interface over WiFi
-![An iPhone screenshot showing the Bit Pirate firmware web interface](images/presentation_mobile.png)
+![An iPhone screenshot showing the firmware web interface](images/presentation_mobile.png)
 
 ## Standalone Mode for the Cardputer
-![A Cardputer running the ESP32 Bit Pirate in standalone mode](images/standalonemode_s.png)
+![A Cardputer running in standalone mode](images/standalonemode_s.png)
 
 ## Browser-Based Web Serial Tools
 
-The [ESP32 Bit Pirate Web Serial Tools](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/) provides direct access to the Serial CLI from a compatible browser, without installing PuTTY, minicom, or another terminal application.
+The [upstream Web Serial Tools](https://geo-tp.github.io/ESP32-Bit-Pirate/web-tools/) provide direct access to the Serial CLI from a compatible browser, without installing PuTTY, minicom, or another terminal application.
 
-![A demo Using the ESP32 Bit Pirate with Web Serial Tools](images/web_tools_demo.gif)
+![A demo using Web Serial Tools](images/web_tools_demo.gif)
 
 ## Contribute
-See [How To Contribute](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Contribute) section, which outlines a **simple way to add a new command** to any mode.
 
-## Visuals Assets
+See [How To Contribute](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Contribute) and [CONTRIBUTING.md](CONTRIBUTING.md) for adding a new command to any mode.
 
-#### [![Small logo of the ESP32 Bit Pirate firmware](images/logo_square_small.png)](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Visual-Assets)
+Pull requests for WebAugur-specific work should target this repository: https://github.com/webaugur/WebAugur
 
-See [images, logo, presentations, photo, video, illustrations](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Visual-Assets). These visuals can be **freely used in blog posts, documentation, videos, or articles** to help explain and promote the firmware.
+## Develop / sync with upstream
 
+```bash
+# remotes (already configured in this workspace)
+# origin   -> webaugur/WebAugur
+# upstream -> geo-tp/ESP32-Bit-Pirate
+
+git fetch upstream
+git merge upstream/pioarduino   # or rebase, depending on preference
+```
+
+Default branch: **`pioarduino`** (PlatformIO + Arduino / pioarduino platform).
+
+## Visual Assets
+
+#### [![Small logo](images/logo_square_small.png)](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Visual-Assets)
+
+See [images, logo, presentations, photo, video, illustrations](https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Visual-Assets). Upstream visuals can be **freely used in blog posts, documentation, videos, or articles**. WebAugur-specific branding can be added over time.
 
 ## Warning
 > ⚠️ **Voltage Warning**: Devices should only operate at **3.3V** or **5V**.
@@ -192,3 +197,7 @@ See [images, logo, presentations, photo, video, illustrations](https://github.co
 > - Avoid any unauthorized RF transmissions (e.g., sub-GHz) that could violate local regulations or disrupt networks and communications.
 > - The authors are not responsible for any misuse of this software or hardware, including legal consequences resulting from unauthorized access or signal emission.
 > - Always stay within the bounds of your country’s laws and responsible disclosure policies.
+
+## License
+
+MIT — same as upstream. Copyright notices of original authors are retained. See [LICENSE](LICENSE).

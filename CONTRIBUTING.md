@@ -7,6 +7,8 @@ As a contributor, you usually only need to work on the **Controller** and **Serv
 If you are not familiar with PlatformIO, you can follow the build instructions here:  
 https://github.com/geo-tp/ESP32-Bit-Pirate/wiki/99-Build
 
+This repository is the **WebAugur** fork (`webaugur/WebAugur`). Open WebAugur-specific PRs against https://github.com/webaugur/WebAugur.
+
 
 ## Basic Steps
 

@@ -15,7 +15,7 @@ const GEMINI_API_KEY_STORAGE_KEY = "gemini_api_key";
 const ECHO_FILTER_WINDOW_MS = 4000;
 
 const GEMINI_TRANSLATOR_CONTEXT = `
-You are a command translator for a custom ESP32 Bit Pirate-style firmware.
+You are a command translator for WebAugur, an ESP32 multi-protocol firmware forked from ESP32 Bit Pirate.
 
 Your job is to convert natural language into exact firmware commands.
 

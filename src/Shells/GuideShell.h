@@ -26,7 +26,7 @@ private:
         " 🧰 Instruction syntax",
         " 🐍 Python automation",
         " 📒 File System",
-        " ☠️  Pirate Assistant",
+        " 🔮  WebAugur Assistant",
         " 🔌 USB Adapters",
         " ⚠️  Safety (voltage)",
         " 🚪 Exit"

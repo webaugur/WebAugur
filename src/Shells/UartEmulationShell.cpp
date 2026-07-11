@@ -321,7 +321,7 @@ void UartEmulationShell::emulateBoot() {
             }
 
             line = uartService.readLine();
-            if (line == "esp32bitpirate") break;
+            if (line == "esp32bitpirate" || line == "webaugur") break;
 
             uartService.println("Login incorrect, quitting boot...");
             return;
@@ -389,7 +389,7 @@ void UartEmulationShell::emulateShell(bool protectedShell) {
             while (!line.empty() && isSpace((unsigned char)line.front())) line.erase(line.begin());
             while (!line.empty() && isSpace((unsigned char)line.back()))  line.pop_back();
 
-            if (line == "esp32bitpirate") break;
+            if (line == "esp32bitpirate" || line == "webaugur") break;
 
             uartService.println("Login incorrect");
             uartService.print("login: ");

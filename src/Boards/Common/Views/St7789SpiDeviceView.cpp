@@ -64,7 +64,7 @@ void St7789SpiDeviceView::logo() {
   // Sub
   tft.setTextColor(TFT_WHITE, TFT_BLACK);
   GlobalState& state = GlobalState::getInstance();
-  auto version = std::string("ESP32 Bit Pirate - ") + state.getVersion();
+  auto version = std::string("WebAugur - ") + state.getVersion();
   drawCenterText(version.c_str(), tft.height() * 130 / 170, 2);
 }
 

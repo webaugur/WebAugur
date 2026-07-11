@@ -19,7 +19,7 @@ TerminalTypeEnum TerminalTypeConfigurator::configure() {
         selected = selector.selectHeadless();
     #else
         selected = selector.select(
-            "ESP32 BIT PIRATE",
+            "WEBAUGUR",
             options,
             "Select terminal type",
             ""

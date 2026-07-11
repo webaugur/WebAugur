@@ -73,7 +73,7 @@ void SubGhzRawCdcAdapter::begin() {
 
     if (hardwareReady) {
         subGhzService->applySniffProfile(runtimeConfig->frequencyMhz);
-        hostSerial->println("READY ESP32-BitPirate SubGHz Raw CDC");
+        hostSerial->println("READY WebAugur SubGHz Raw CDC");
     } else {
         hostSerial->println("ERR:CC1101");
     }
@@ -365,7 +365,7 @@ void SubGhzRawCdcAdapter::printHelp() {
 }
 
 void SubGhzRawCdcAdapter::printVersion() {
-    hostSerial->println("V 1.0 ESP32-BitPirate SubGHz Raw CDC");
+    hostSerial->println("V 1.0 WebAugur SubGHz Raw CDC");
 }
 
 void SubGhzRawCdcAdapter::printOk() {

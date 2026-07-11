@@ -50,7 +50,7 @@ int HorizontalSelector::selectHeadless() {
     int selected = 2;  // default: Serial
     const unsigned long longPressMs = 800;
 
-    display.topBar("ESP32 BIT PIRATE", false, false);
+    display.topBar("WEBAUGUR", false, false);
     display.horizontalSelection(
         options,
         selected,

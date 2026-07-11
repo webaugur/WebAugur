@@ -5,9 +5,9 @@ inline const char* index_html = R"rawliteral(
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 Bit Pirate</title>
+  <title>WebAugur</title>
   <link rel="stylesheet" href="/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='sans-serif' font-size='56' font-weight='900' fill='%2300ff00'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='sans-serif' font-size='56' font-weight='900' fill='%2300ff00'%3EW%3C/text%3E%3C/svg%3E">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, interactive-widget=resizes-content">
 </head>
 <body>
@@ -28,7 +28,7 @@ inline const char* index_html = R"rawliteral(
           autocomplete="off"
           autocorrect="off"
           spellcheck="false">
-        <button id="ai-btn" type="button" title="Open Pirate Assistant">✨ AI</button>
+        <button id="ai-btn" type="button" title="Open WebAugur Assistant">✨ AI</button>
         <button id="files-btn" type="button" title="Manage files">📁 Files</button>
       </div>
       <div class="actions">
@@ -53,7 +53,7 @@ inline const char* index_html = R"rawliteral(
   <aside id="ai-panel" class="ai-panel" style="display:none;">
     <div class="ai-panel-header">
       <div>
-        <h2>🏴‍☠️ Pirate Assistant</h2>
+        <h2>🔮 WebAugur Assistant</h2>
       </div>
       <button class="ai-close" type="button" aria-label="Close" onclick="closeAiPanel()">×</button>
     </div>
